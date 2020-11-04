@@ -14,3 +14,27 @@ OPTIONS:
     -i, --input <FILE>     Neander program.
     -o, --output <FILE>    Resulting COE file.
 ```
+
+### Example
+
+`example.asm`:
+
+```
+NOP
+NOP
+LDA 30
+STA 06
+```
+
+results in:
+
+```
+memory_initialization_radix=16;
+memory_initialization_vector=
+00,
+00,
+20,
+30,
+10,
+06,
+```
