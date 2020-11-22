@@ -36,6 +36,7 @@ fn main() {
 
     let instructions = input_file_contents
         .lines()
+        .filter(|line| !line.is_empty())
         .map(|line| {
             let tokens = line.split(' ').collect::<Vec<&str>>();
             (
