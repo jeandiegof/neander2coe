@@ -73,6 +73,8 @@ fn decode_instruction((first_value, second_value): (&str, &str)) -> String {
         ("ADD", value) => format!("30,\n{}", value),
         ("OR", address) => format!("40,\n{}", address),
         ("AND", address) => format!("50,\n{}", address),
+        ("MULT", address) => format!("C0,\n{}", address),
+        ("SUB", address) => format!("D0,\n{}", address),
         ("NOT", _) => "60".to_string(),
         ("JMP", address) => format!("80,\n{}", address),
         ("JN", address) => format!("90,\n{}", address),
